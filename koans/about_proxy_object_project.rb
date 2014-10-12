@@ -23,19 +23,19 @@ class Proxy
       if @messages_count.include?(method_name)
         @messages_count[method_name] += 1
       else
-	    @messages_count[method_name] = 1
+        @messages_count[method_name] = 1
       end
       @messages << method_name
       @object.send(method_name, *args)
     else
-	  super method_name, *args, &block
-	end
+      super method_name, *args, &block
+    end
   end
   def messages
     @messages
   end
   def called?(method)
-  	@messages.include?(method)
+      @messages.include?(method)
   end
   def number_of_times_called(method)
     n = @messages_count[method]
