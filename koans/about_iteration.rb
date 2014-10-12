@@ -117,6 +117,7 @@ class AboutIteration < Neo::Koan
   #
   #   file = File.open(filename)
   #   # code to read 'file'
+  # Answer: The first way automatically closes a file after the end of block
   #
   # When you get to the "AboutSandwichCode" koan, recheck your answer.
 
